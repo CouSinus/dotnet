@@ -39,3 +39,5 @@ C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\ru\Microsoft.CodeAnaly
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.resources.dll
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\WepAPITP1.xml
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\obj\Debug\net6.0\WepAPITP1.xml

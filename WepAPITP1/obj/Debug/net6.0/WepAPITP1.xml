@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WepAPITP1</name>
+    </assembly>
+    <members>
+        <member name="M:WepAPITP1.Controllers.DevisesController.GetAll">
+            <summary>
+            Get all currencies
+            </summary>
+            <returns>List of currencies</returns>
+        </member>
+        <member name="M:WepAPITP1.Controllers.DevisesController.GetById(System.Int32)">
+            <summary>
+            Get a single currency
+            </summary>
+            <param name="id">Currency id</param>
+            <returns>HttpResponse</returns>
+            <response code ="200">Found a currency</response>
+            <response code ="404">No currency found</response>
+        </member>
+        <member name="M:WepAPITP1.Controllers.DevisesController.Post(WepAPITP1.Models.Devise)">
+            <summary>
+            Save a new currency
+            </summary>
+            <param name="devise">Currency</param>
+            <returns>HttpResponse</returns>
+            <response code ="200">Currency saved</response>
+            <response code ="400">Invalid format of currency</response>
+        </member>
+        <member name="M:WepAPITP1.Controllers.DevisesController.Put(System.Int32,WepAPITP1.Models.Devise)">
+            <summary>
+            Edit a currency
+            </summary>
+            <param name="id">Currency id</param>
+            <param name="devise">Currency</param>
+            <returns>HttpResponse</returns>
+            <response code ="200">Currency saved</response>
+            <response code ="400">Invalid format of currency</response>
+            <response code ="404">Currency not found</response>
+        </member>
+        <member name="M:WepAPITP1.Controllers.DevisesController.Delete(System.Int32)">
+            <summary>
+            Delete a currency
+            </summary>
+            <param name="id">Currency id</param>
+            <returns>HttpResponse</returns>
+            <response code ="200">Currency saved</response>
+            <response code ="404">Currency not found</response>
+        </member>
+    </members>
+</doc>
