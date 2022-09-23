@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ClientConvertisseurV1 (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
+    },
+    "ClientConvertisseurV1 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

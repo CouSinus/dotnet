@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="ClientConvertisseurV1.Views.ConvertisseurEuroPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClientConvertisseurV1.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel  HorizontalAlignment="Center">
+        <TextBlock Name="MontEuString" 
+                   Margin="0, 10, 0, 5">
+            Montant en euros
+        </TextBlock>
+        <TextBox 
+            Name="MontEuInput" 
+            RelativePanel.Below="MontEuString" 
+            Margin="0, 5, 0, 10">
+        </TextBox>
+
+        <TextBlock 
+            Name="DeviseChoiceString" 
+            RelativePanel.Below="MontEuInput" 
+            Margin="0, 10, 0, 5">
+            Devise
+        </TextBlock>
+        <ComboBox 
+            Name="DeviseChoiceBox" 
+            RelativePanel.Below="DeviseChoiceString" 
+            Margin="0, 5, 0, 10"
+            ItemsSource="{Binding}"
+            SelectedValuePath="Id"
+            DisplayMemberPath="DeviseName">
+            
+        </ComboBox>
+
+        <Button 
+            Name="ConversionButton" 
+            RelativePanel.Below="DeviseChoiceBox" 
+            Margin="0, 5, 0, 10">
+            Convertir
+        </Button>
+
+        <TextBox 
+            Name="MontDeviseOutput" 
+            RelativePanel.Below="ConversionButton" 
+            Margin="0, 10, 0, 5" 
+            IsReadOnly="True">
+        </TextBox>
+        
+    </RelativePanel>
+</Page>

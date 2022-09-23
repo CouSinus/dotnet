@@ -6,7 +6,7 @@ using WepAPITP1.Models;
 
 namespace WepAPITP1.Controllers
 {
-    [Route("api/Devise")]
+    [Route("api/devise")]
     [ApiController]
     public class DevisesController : ControllerBase
     {
