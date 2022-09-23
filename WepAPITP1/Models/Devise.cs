@@ -1,4 +1,6 @@
-﻿namespace WepAPITP1.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WepAPITP1.Models
 {
     public class Devise
     {
@@ -12,6 +14,7 @@
 
 		private string? deviseName;
 
+		[Required]
 		public string? DeviseName
 		{
 			get { return deviseName; }

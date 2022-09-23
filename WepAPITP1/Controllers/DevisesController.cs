@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 using WepAPITP1.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -30,27 +31,49 @@ namespace WepAPITP1.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}", Name = "GetDevise")]
-        public Devise GetById(int id)
+        public IActionResult GetById(int id)
         {
-            return ListDevises.FirstOrDefault(x => x.Id == id);
+            Devise devise = ListDevises.FirstOrDefault(x => x.Id == id);
+            return devise == null ? NotFound() : Ok(devise);
         }
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Devise devise)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            ListDevises.Add(devise);
+            return CreatedAtRoute("GetDevise", new { id = devise.Id }, devise);
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] Devise devise)
         {
+            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            if (id != devise.Id) { return BadRequest(ModelState); }
+
+            int index = ListDevises.FindIndex(x => x.Id == id);
+            if (index < 0) { return NotFound(); }
+
+            ListDevises[index] = devise;
+            return NoContent();
         }
 
         // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            Devise devise = (from d in ListDevises where d.Id == id select d).FirstOrDefault();
+            if(devise == null)
+            {
+                return NotFound();
+            }
+            ListDevises.Remove(devise);
+            return Ok(devise);
         }
     }
 }

@@ -25,3 +25,17 @@ C:\Users\maxim\entorno\ASI.NET\WepAPITP1\obj\Debug\net6.0\refint\WepAPITP1.dll
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\obj\Debug\net6.0\WepAPITP1.pdb
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\obj\Debug\net6.0\WepAPITP1.genruntimeconfig.cache
 C:\Users\maxim\entorno\ASI.NET\WepAPITP1\obj\Debug\net6.0\ref\WepAPITP1.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\maxim\entorno\ASI.NET\WepAPITP1\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
