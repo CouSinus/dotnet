@@ -2,13 +2,61 @@
     x:Class="ClientConvertisseurV2.Views.ConvertisseurEuroPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ClientConvertisseurV2.Views"
+    xmlns:local="using:ClientConvertisseurV1.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel  HorizontalAlignment="Center">
+        <TextBlock Name="MontEuString" 
+                   Margin="0, 10, 0, 5">
+            Montant en euros
+        </TextBlock>
+        <TextBox 
+            Name="MontEuInput" 
+            RelativePanel.Below="MontEuString" 
+            Margin="0, 5, 0, 10"
+            Text="{Binding MntEuros, Mode=TwoWay}">
+        </TextBox>
 
-    </Grid>
+        <TextBlock 
+            Name="DeviseChoiceString" 
+            RelativePanel.Below="MontEuInput" 
+            Margin="0, 10, 0, 5">
+            Devise
+        </TextBlock>
+        <ComboBox 
+            Name="DeviseChoiceBox" 
+            RelativePanel.Below="DeviseChoiceString" 
+            Margin="0, 5, 0, 10"
+            ItemsSource="{Binding ListDevise}"
+            SelectedValuePath="Id"
+            DisplayMemberPath="DeviseName"
+            SelectedItem="{Binding DeviseSelected, Mode=TwoWay}">
+
+        </ComboBox>
+
+        <Button 
+            Name="ConversionButton" 
+            RelativePanel.Below="DeviseChoiceBox" 
+            Margin="0, 5, 0, 10"
+            Command="{Binding BtnSetConversion}">
+            Convertir
+        </Button>
+
+        <TextBlock Name="MontDeviseString" 
+                   Margin="0, 10, 0, 5"
+                   RelativePanel.Below="ConversionButton" >
+            Montant en devises
+        </TextBlock>
+        <TextBox 
+            Name="MontDeviseOutput" 
+            RelativePanel.Below="MontDeviseString" 
+            Margin="0, 5, 0, 0" 
+            IsReadOnly="True"
+            Text="{Binding MntDevise, Mode=OneWay}">
+        </TextBox>
+
+    </RelativePanel>
 </Page>

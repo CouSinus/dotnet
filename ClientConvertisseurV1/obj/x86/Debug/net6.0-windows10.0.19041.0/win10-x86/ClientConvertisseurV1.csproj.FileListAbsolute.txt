@@ -298,3 +298,6 @@ C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\bin\x86\Debug\net6.0-window
 C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\clrcompression.dll
 C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ClientConvertisseurV1.Properties.Resources.resources
 C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ClientConvertisseurV1.csproj.GenerateResource.cache
+C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\EO.Base.dll
+C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\EO.WebBrowser.dll
+C:\Users\maxim\entorno\ASI.NET\ClientConvertisseurV1\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\EO.WebEngine.dll

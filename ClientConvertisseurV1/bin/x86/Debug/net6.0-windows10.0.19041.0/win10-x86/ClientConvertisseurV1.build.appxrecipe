@@ -715,6 +715,15 @@
     <AppxPackagedFile Include="C:\Users\maxim\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.27\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maxim\.nuget\packages\eo.webbrowser\22.2.49\lib\EO.Base.dll">
+      <PackagePath>EO.Base.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maxim\.nuget\packages\eo.webbrowser\22.2.49\lib\EO.WebBrowser.dll">
+      <PackagePath>EO.WebBrowser.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maxim\.nuget\packages\eo.webbrowser\22.2.49\lib\EO.WebEngine.dll">
+      <PackagePath>EO.WebEngine.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maxim\.nuget\packages\microsoft.aspnet.webapi.client\5.2.9\lib\netstandard2.0\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
     </AppxPackagedFile>

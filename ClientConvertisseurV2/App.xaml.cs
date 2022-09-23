@@ -1,4 +1,8 @@
-﻿using Microsoft.UI.Xaml;
+﻿using ClientConvertisseurV2.ViewModels;
+using ClientConvertisseurV2.Views;
+using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -26,6 +30,19 @@ namespace ClientConvertisseurV2
     /// </summary>
     public partial class App : Application
     {
+        private static FrameworkElement mainRoot;
+
+        public static FrameworkElement MainRoot
+        {
+            get { return mainRoot; }
+            private set { mainRoot = value; }
+        }
+
+        internal ConvertisseurEuroViewModel ConvertisseurEuroVM
+        {
+            get { return Ioc.Default.GetService<ConvertisseurEuroViewModel>(); }
+        }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -33,6 +50,11 @@ namespace ClientConvertisseurV2
         public App()
         {
             this.InitializeComponent();
+
+            Ioc.Default.ConfigureServices(
+                 new ServiceCollection()
+                 .AddSingleton<ConvertisseurEuroViewModel>()
+                 .BuildServiceProvider());
         }
 
         /// <summary>
@@ -43,7 +65,16 @@ namespace ClientConvertisseurV2
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             m_window = new MainWindow();
+
+            Frame rootFrame = new Frame();
+
+            this.m_window.Content = rootFrame;
+
+            MainRoot = m_window.Content as FrameworkElement;
+
             m_window.Activate();
+
+            rootFrame.Navigate(typeof(ConvertisseurEuroPage));
         }
 
         private Window m_window;
