@@ -1,0 +1,66 @@
+@page
+@model APISeries.Pages.Series.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].Resume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].NbSaisons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].NbEpisodes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].AnneCreation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie[0].Network)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Serie) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbSaisons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbEpisodes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnneCreation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Network)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SerieId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SerieId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SerieId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

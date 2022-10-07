@@ -1,0 +1,40 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = APISeries
+build_property.RootNamespace = APISeries
+build_property.ProjectDir = C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\APISeries\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\APISeries
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/Series/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/Series/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/Series/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/Series/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/Series/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VyaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/entorno/ASI.NET/TP2_MaximeRiss_DotNet/APISeries/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
