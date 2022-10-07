@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APISeries.Models.EntityFramework;
+using APISeries.Models.DataManager;
+using APISeries.Models.Repository;
 
 namespace APISeries.Controllers
 {
@@ -15,18 +17,18 @@ namespace APISeries.Controllers
     {
         private readonly string ERROR_ID_NOT_FOUND = "id Utilisateur non trouvé";
 
-        private readonly SeriesDBContext _context;
+        private readonly IDataRepository<Utilisateur> dataRepository;
 
-        public UtilisateursController(SeriesDBContext context)
+        public UtilisateursController(IDataRepository<Utilisateur> dataRepo)
         {
-            _context = context;
+            dataRepository = dataRepo;
         }
 
         // GET: api/Utilisateurs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateur()
+        public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateurs()
         {
-            return await _context.Utilisateur.ToListAsync();
+            return dataRepository.GetAll();
         }
 
         // GET: api/Utilisateurs/5
@@ -34,13 +36,12 @@ namespace APISeries.Controllers
         [ActionName("id")]
         public async Task<ActionResult<Utilisateur>> GetUtilisateurById(int id)
         {
-            var utilisateur = await _context.Utilisateur.Where(u => u.UtilisateurId == id).SingleOrDefaultAsync();
-
+            var utilisateur = dataRepository.GetById(id);
+            //var utilisateur = await _context.Utilisateurs.Include(u => u.NotesUtilisateur).SingleOrDefaultAsync(m => m.UtilisateurId == id);
             if (utilisateur == null)
             {
                 return NotFound(ERROR_ID_NOT_FOUND);
             }
-
             return utilisateur;
         }
 
@@ -48,13 +49,11 @@ namespace APISeries.Controllers
         [ActionName("email")]
         public async Task<ActionResult<Utilisateur>> GetUtilisateurByEmail(string email)
         {
-            var utilisateur = await _context.Utilisateur.Where(u => u.Mail == email).SingleOrDefaultAsync();
-
-            if(utilisateur == null)
+            var utilisateur = await dataRepository.GetByStringAsync(email);
+            if (utilisateur == null)
             {
-                return NotFound("Le mail spécifié est introuvable");
+                return NotFound();
             }
-
             return utilisateur;
         }
 
@@ -68,25 +67,12 @@ namespace APISeries.Controllers
             {
                 return BadRequest();
             }
-
-            _context.Entry(utilisateur).State = EntityState.Modified;
-
-            try
+            var userToUpdate = dataRepository.GetById(id);
+            if (userToUpdate == null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UtilisateurExists(id))
-                {
-                    return NotFound(ERROR_ID_NOT_FOUND);
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            dataRepository.Update(userToUpdate.Value, utilisateur);
             return NoContent();
         }
 
@@ -95,31 +81,26 @@ namespace APISeries.Controllers
         [HttpPost]
         public async Task<ActionResult<Utilisateur>> PostUtilisateur(Utilisateur utilisateur)
         {
-            _context.Utilisateur.Add(utilisateur);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUtilisateur", new { id = utilisateur.UtilisateurId }, utilisateur);
+            dataRepository.Add(utilisateur);
+            return CreatedAtAction("GetById", new { id = utilisateur.UtilisateurId }, utilisateur);
         }
 
         // DELETE: api/Utilisateurs/5
-        /*[HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUtilisateur(int id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Utilisateur>> DeleteUtilisateur(int id)
         {
-            var utilisateur = await _context.Utilisateur.FindAsync(id);
+            var utilisateur = dataRepository.GetById(id);
             if (utilisateur == null)
             {
-                return NotFound(ERROR_ID_NOT_FOUND);
+                return NotFound();
             }
+            dataRepository.Delete(utilisateur.Value);
+            return utilisateur;
+        }
 
-            _context.Utilisateur.Remove(utilisateur);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }*/
-
-        private bool UtilisateurExists(int id)
+        /*private bool UtilisateurExists(int id)
         {
             return _context.Utilisateur.Any(e => e.UtilisateurId == id);
-        }
+        }*/
     }
 }

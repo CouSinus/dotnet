@@ -1,4 +1,6 @@
-﻿using APISeries.Models.EntityFramework;
+﻿using APISeries.Models.DataManager;
+using APISeries.Models.EntityFramework;
+using APISeries.Models.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -13,6 +15,16 @@ namespace APISeries.Controllers.Tests
 
         private readonly SeriesDBContext _context;
         private readonly UtilisateursController _controller;
+        private IDataRepository<Utilisateur> _dataRepository;
+        public UtilisateursControllerTests()
+        {
+            var builder = new DbContextOptionsBuilder<SeriesDBContext>()
+                .UseNpgsql("Server=localhost;port=5432;Database=SeriesDB;uid=postgres;password=postgres;");
+            _context = new SeriesDBContext(builder.Options);
+            _dataRepository = new UtilisateurManager(_context);
+            _controller = new UtilisateursController(_dataRepository);
+        }
+
 
         [TestMethod()]
         public void GetUtilisateurTest()

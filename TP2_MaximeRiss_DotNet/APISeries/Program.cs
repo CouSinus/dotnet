@@ -1,4 +1,6 @@
+using APISeries.Models.DataManager;
 using APISeries.Models.EntityFramework;
+using APISeries.Models.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace APISeries
@@ -18,6 +20,8 @@ namespace APISeries
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IDataRepository<Utilisateur>, UtilisateurManager>();
 
             var app = builder.Build();
 
