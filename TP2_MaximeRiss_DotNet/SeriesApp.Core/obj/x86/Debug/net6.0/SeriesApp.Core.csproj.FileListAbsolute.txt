@@ -1,0 +1,12 @@
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\bin\x86\Debug\net6.0\SeriesApp.Core.deps.json
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\bin\x86\Debug\net6.0\SeriesApp.Core.dll
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\bin\x86\Debug\net6.0\SeriesApp.Core.pdb
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.csproj.AssemblyReference.cache
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.AssemblyInfoInputs.cache
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.AssemblyInfo.cs
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.dll
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\refint\SeriesApp.Core.dll
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\SeriesApp.Core.pdb
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp.Core\obj\x86\Debug\net6.0\ref\SeriesApp.Core.dll

@@ -1,0 +1,1 @@
+C:\Users\maxim\entorno\ASI.NET\TP2_MaximeRiss_DotNet\SeriesApp\SeriesApp.csproj;x86
